@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votação: Influencer do Ano</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    .influencer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .influencer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      margin: 10px;
+    }
+    
+    .influencer:hover {
+      transform: translateY(-5px);
+    }
+    
+    .influencer img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    
+    .influencer h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .influencer p {
+      font-size: 16px;
+      color: #777;
+      text-align: center;
+    }
+    
+    .vote-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      margin-top: 20px;
+    }
+    
+    .vote-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Votação: Influencer do Ano</h1>
+  
+  <div class="influencer-container">
+    <div class="influencer">
+      <img src="influencer1.jpg" alt="Influencer 1">
+      <h3>Beno Lopes Dias</h3>
+      <p>Descrição do Influencer 1</p>
+    </div>
+  
+    <div class="influencer">
+      <img src="influencer2.jpg" alt="Influencer 2">
+      <h3>Nome do Influencer 2</h3>
+      <p>Descrição do Influencer 2</p>
+    </div>
+  
+    <div class="influencer">
+      <img src="influencer3.jpg" alt="Influencer 3">
+      <h3>Nome do Influencer 3</h3>
+      <p>Descrição do Influencer 3</p>
+    </div>
+  
+    <!-- Adicione mais influnciadores aqui -->
+
+
+<div class="influencer">
+  <img src="influencer4.jpg" alt="Influencer 4">
+  <h3>Nome do Influencer 4</h3>
+  <p>Descrição do Influencer 4</p>
+</div>
+
+<div class="influencer">
+  <img src="influencer5.jpg" alt="Influencer 5">
+  <h3>Nome do Influencer 5</h3>
+  <p>Descrição do Influencer 5</p>
+</div>
+
+<div class="influencer">
+  <img src="influencer6.jpg" alt="Influencer 6">
+  <h3>Nome do Influencer 6</h3>
+  <p>Descrição do Influencer 6</p>
+</div>
+  </div>
+<button class="vote-button">Votar</button>
+
+  <script>
+    const influencers = document.querySelectorAll('.influencer');
+    const voteButton = document.querySelector('.vote-button');
+  
+    let selectedInfluencer = null;
+  
+    influencers.forEach(influencer => {
+      influencer.addEventListener('click', () => {
+        if (selectedInfluencer) {
+          selectedInfluencer.classList.remove('selected');
+        }
+  
+        selectedInfluencer = influencer;
+        selectedInfluencer.classList.add('selected');
+        voteButton.disabled = false;
+      });
+    });
+  
+    voteButton.addEventListener('click', () => {
+      if (selectedInfluencer) {
+        const influencerName = selectedInfluencer.querySelector('h3').textContent;
+        alert(`Você votou no influencer: ${influencerName}`);
+      } else {
+        alert('Selecione um influencer antes de votar!');
+      }
+    });
+  </script>
+</body>
+</html>
