@@ -1012,94 +1012,25 @@ header img {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
+  width: 350px; /* Ajuste a largura conforme necessário */
+  height: auto;
   background-color: rgba(51, 56, 131, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .voting-card img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 200px; /* Ajuste a altura máxima conforme necessário */
   object-fit: cover;
+  border-radius: 5px;
 }
 
-.card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.voting-card:hover .card-overlay {
-  opacity: 1;
-}
-
-.vote-button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.vote-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.light-bg {
-  background-color: #f1f1f1;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.text-black {
-  color: #000;
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.vote-button.red {
-  background-color: #ff0000;
-  color: #fff;
-}
-
-.vote-button.red:hover {
-  background-color: #ff6666;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-}
-
-.voting-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.voting-card p {
+  margin-top: 10px;
 }
 
 .red-button {
